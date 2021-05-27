@@ -1,0 +1,3 @@
+rootProject.name = 'ktaiapisdk-java'
+include 'aisdk'
+
