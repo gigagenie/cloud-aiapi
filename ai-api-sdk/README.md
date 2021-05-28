@@ -7,7 +7,7 @@
 - iOS/ : iOS Mobile SDK 라이브러리 및 샘플 코드 (추가 예정)
 - java/ : java SDK 라이브러리 및 샘플 코드 
 - node.js/ : node.js SDK 라이브러리 및 샘플 코드
-- Python/ : Python3 SDK 라이브러리 및 샘플 코드 (추가 예정)
+- Python/ : Python3 SDK 라이브러리 및 샘플 코드
 
 ### 개발자 가이드
 
