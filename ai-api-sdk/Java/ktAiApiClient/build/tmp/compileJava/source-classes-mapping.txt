@@ -1,9 +1,9 @@
-com/kt/ai/api/client/SttAsyncClient.java
- com.kt.ai.api.client.SttAsyncClient
-com/kt/ai/api/client/TtsClient.java
- com.kt.ai.api.client.TtsClient
-com/kt/ai/api/client/SttSyncClient.java
- com.kt.ai.api.client.SttSyncClient
-com/kt/ai/api/client/SttGrpcClient.java
- com.kt.ai.api.client.SttGrpcClient
- com.kt.ai.api.client.SttGrpcClient$1
+com/kt/ai/aisdk/client/TtsClient.java
+ com.kt.ai.aisdk.client.TtsClient
+com/kt/ai/aisdk/client/SttAsyncClient.java
+ com.kt.ai.aisdk.client.SttAsyncClient
+com/kt/ai/aisdk/client/SttSyncClient.java
+ com.kt.ai.aisdk.client.SttSyncClient
+com/kt/ai/aisdk/client/SttGrpcClient.java
+ com.kt.ai.aisdk.client.SttGrpcClient
+ com.kt.ai.aisdk.client.SttGrpcClient$1

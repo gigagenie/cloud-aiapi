@@ -11,11 +11,11 @@ const clientSecret = "client-secret";
 sttClient.setAuth(clientKey, clientID, clientSecret);
 
 var sttMode = 2;
-    var targetLanguage = "ko";
-    var encoding = "mp3";
-    var channel = 1;
-    var sampleRate = 16000;
-    var sampleFmt = "S16LE";
+var targetLanguage = "ko";
+var encoding = "mp3";
+var channel = 1;
+var sampleRate = 16000;
+var sampleFmt = "S16LE";
 
 let audioFile = path.join(__dirname, "/sample/long.mp3");
 
@@ -27,5 +27,7 @@ console.log(resultJson);
 
 transactionId = resultJson["result"][0]["transactionId"];
 
-var queryResultJson = sttClient.querySTT(transactionId);
-console.log(queryResultJson);
+setTimeout(() => {
+    var queryResultJson = sttClient.querySTT(transactionId);
+    console.log(queryResultJson);
+}, 5000);

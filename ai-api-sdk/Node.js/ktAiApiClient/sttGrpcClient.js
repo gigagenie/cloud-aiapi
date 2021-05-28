@@ -4,21 +4,28 @@ const fs = require('fs');
 
 var notifier = require('./kt-ai-api-sdk//noti.js');
 
+function sleep(ms) {
+    return new Promise((resolve) => {
+      setTimeout(resolve, ms);
+    });
+} 
+
 notifier.on('onError', (message) => {
     console.log('Callback Event onError message ==> ' + JSON.stringify(message));
-    if(message.code == 301) {
-        mgRpc.setServiceURL(message.strMsg);
-        mgRpc.reconnectionGRPC();
-    }
 });
 
 notifier.on('onRelease', (message) => {
     console.log('Callback Event onRelease message ==> ' + message)
 });
 
-notifier.on('onReadySTT', (sampleRate, ch, format) => {
+notifier.on('onReadySTT', async (sampleRate, ch, format) => {
     console.log('Callback Event onReadySTT message ==> ' + sampleRate + ', ' + ch + ', ' + format);
-    gRpcClient.sendAudioData(audioData);
+    var sendSize = sampleRate*ch
+    for(var i = 0; i <= audioData.length/sendSize; i++) {
+        var sendData = audioData.slice(i*sendSize, (i+1)*sendSize);
+        gRpcClient.sendAudioData(sendData);
+        await sleep(100);
+    }
 });
 
 notifier.on('onStopSTT', (message) => {
@@ -47,4 +54,4 @@ var audioData = Buffer.from(fileData, 'binary');
 setTimeout(() => {
     gRpcClient.releaseConnection();
     process.exit();
-}, 3000);
+}, 15000);

@@ -27,6 +27,7 @@ dependencies {
     implementation 'org.json:json:20180813'
     compile group: 'javazoom', name: 'jlayer', version: '1.0.1'
 
+    //implementation project(':aisdk')
     implementation files('libs/ktAiApiSDK-1.0.jar')
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
