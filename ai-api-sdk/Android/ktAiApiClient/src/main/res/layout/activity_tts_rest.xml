@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="top|center"
+    android:orientation="vertical"
+    android:windowSoftInputMode="adjustPan" >
+
+    <LinearLayout
+        android:id="@+id/memo_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TTS Rest API DEMO"
+            android:textSize="30sp"
+            android:layout_gravity="center_horizontal"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/option_bar"
+        android:layout_below="@+id/memo_bar"
+        android:fillViewport="true"
+        android:scrollbarSize="2dip"
+        android:scrollbars="vertical" >
+
+        <EditText android:id="@+id/charEditText"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fadingEdge="vertical"
+            android:gravity="start"
+            android:inputType="textMultiLine"
+            android:paddingLeft="10dip"
+            android:textSize="20dip"
+            android:textStyle="bold"
+            android:focusable="true"
+            android:hint="TTS로 변환할 문자 입력"
+            />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/option_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_request"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dip"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"
+                android:text="speaker" />
+
+            <Spinner
+                android:id="@+id/speaker_spinner"
+                android:entries="@array/speaker_array"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_centerHorizontal="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dip"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"
+                android:text="pitch [50-150]" />
+
+            <SeekBar
+                android:id="@+id/pitch_seek"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:max="100"
+                android:progress="50"
+                android:thumb="@drawable/thumb" />
+
+            <TextView
+                android:id="@+id/pitch_level"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"
+                android:text="100" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dip"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"
+                android:text="speed [50-150]" />
+
+            <SeekBar
+                android:id="@+id/speed_seek"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:max="100"
+                android:progress="50"
+                android:thumb="@drawable/thumb" />
+
+            <TextView
+                android:id="@+id/speed_level"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"
+                android:text="100" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dip"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"
+                android:text="volume [50-150]" />
+
+            <SeekBar
+                android:id="@+id/volume_seek"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:max="100"
+                android:progress="50"
+                android:thumb="@drawable/thumb" />
+
+            <TextView
+                android:id="@+id/volume_level"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"
+                android:text="100" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dip"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"
+                android:text="language" />
+
+            <Spinner
+                android:entries="@array/language"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_centerHorizontal="true"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_request"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/ttsrequest"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="TTS Request" />
+
+        <Button
+            android:id="@+id/ttsplay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="play audio" />
+
+    </LinearLayout>
+
+</RelativeLayout>

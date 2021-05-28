@@ -1,0 +1,6 @@
+framework module KTAIAPISDK {
+  umbrella header "KTAIAPISDK.h"
+
+  export *
+  module * { export * }
+}

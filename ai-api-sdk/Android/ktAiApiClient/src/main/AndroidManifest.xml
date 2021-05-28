@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kt.ai.aisdk.ui">
+    <!-- Internet 퍼미션 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- sdcard 퍼미션 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- audio recording 퍼미션 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- for API level 28+ -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".SttRestActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/stt_http_name">
+        </activity>
+        <activity
+            android:name=".SttgRpcActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/stt_grpc_name">
+        </activity>
+        <activity
+            android:name=".TtsRestActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/tts_http_name">
+        </activity>
+
+    </application>
+
+</manifest>

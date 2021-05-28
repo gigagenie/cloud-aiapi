@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="AI SDK SAMPLE" android:textSize="30sp"
+        android:layout_gravity="center_horizontal"
+        />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        >
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="STT REST API" android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            />
+        <Button android:id="@+id/STTOnHTTP01" android:visibility="visible"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:onClick="onClick" android:text="STT Rest API Demo [MIC]"
+            />
+
+        <Button android:id="@+id/STTOnHTTP02" android:visibility="visible"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:onClick="onClick" android:text="STT Rest API Demo [File]"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        >
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="STT gRPC API" android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            />
+        <Button android:id="@+id/STTgRPC01" android:visibility="visible"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:onClick="onClick" android:text="STT gRPC API Demo"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        >
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="TTS REST API" android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            />
+        <Button android:id="@+id/TTSOnHTTP01" android:visibility="visible"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:onClick="onClick" android:text="TTS Rest API Demo"
+            />
+    </LinearLayout>
+</LinearLayout>
+

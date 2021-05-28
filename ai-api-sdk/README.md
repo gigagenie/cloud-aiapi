@@ -2,11 +2,11 @@
 
 ### Contents
 
-- Android/ : Android Mobile SDK 라이브러리 및 샘플 코드 (추가 예정)
-- C#/ : C# SDK 라이브러리 및 샘플 코드 (추가 예정)
-- iOS/ : iOS Mobile SDK 라이브러리 및 샘플 코드 (추가 예정)
-- java/ : java SDK 라이브러리 및 샘플 코드 
-- node.js/ : node.js SDK 라이브러리 및 샘플 코드
+- Android/ : Android Mobile SDK 라이브러리 및 샘플 코드
+- C#/ : C# SDK 라이브러리 및 샘플 코드 
+- iOS/ : iOS Mobile SDK 라이브러리 및 샘플 코드 
+- Java/ : java SDK 라이브러리 및 샘플 코드 
+- Node.js/ : node.js SDK 라이브러리 및 샘플 코드
 - Python/ : Python3 SDK 라이브러리 및 샘플 코드
 
 ### 개발자 가이드
