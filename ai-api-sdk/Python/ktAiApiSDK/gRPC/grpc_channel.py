@@ -4,7 +4,7 @@ import sys
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 
 from proto import ktaiapi_pb2_grpc
-import datetime
+from datetime import datetime
 import hmac
 import hashlib
 from ._config import *
@@ -24,8 +24,7 @@ g_channel = None
 g_stub = None
 
 def getMetadata():
-    (dt, micro) = datetime.datetime.now().strftime('%Y%m%d%H%M%S.%f').split(".")
-    timestamp = "%s%01d" % (dt, int(micro) / 100000)
+    timestamp = datetime.now().strftime('%Y%m%d%H%M%S%f')[:-3]
     message = CLIENT_ID + ':' + timestamp
 
     signature = hmac.new(CLIENT_SECRET.encode(), message.encode(), hashlib.sha256).hexdigest()

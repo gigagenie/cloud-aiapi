@@ -187,9 +187,8 @@ class HttpUtils:
         return result
 
     def getTimestamp(self):
-        (dt, micro) = datetime.now().strftime('%Y%m%d%H%M%S.%f').split(".")
-        dt = "%s%01d" % (dt, int(micro) / 100000)
-        return dt
+        timestamp = datetime.now().strftime('%Y%m%d%H%M%S%f')[:-3]
+        return timestamp
 
     def makeSignature(self, mTimeStamp, clientId, clientSecret):
         secret_key = bytes(clientSecret, "UTF-8")
