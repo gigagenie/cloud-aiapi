@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="top|center"
+    android:orientation="vertical"
+    android:windowSoftInputMode="adjustPan" >
+
+    <LinearLayout
+        android:id="@+id/memo_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VSTTS Rest API DEMO"
+            android:textSize="30sp"
+            android:layout_gravity="center_horizontal"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="398dp"
+        android:layout_height="133dp"
+        android:layout_below="@+id/memo_bar"
+        android:fillViewport="true"
+        android:scrollbarSize="2dip"
+        android:scrollbars="vertical">
+
+        <EditText
+            android:id="@+id/charEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:fadingEdge="vertical"
+            android:focusable="true"
+            android:gravity="start"
+            android:hint="VSTTS로 변환할 문자 입력"
+            android:inputType="textMultiLine"
+            android:paddingLeft="10dip"
+            android:textSize="20dip"
+            android:textStyle="bold" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/option_bar"
+        android:layout_width="400dp"
+        android:layout_height="476dp"
+        android:layout_above="@+id/bottom_request"
+        android:layout_below="@+id/scrollview"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="7dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="4dip"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="speaker [100-999]"
+                android:textColor="#000000" />
+
+            <SeekBar
+                android:id="@+id/speaker_seek"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:max="999"
+                android:progress="100"
+                android:thumb="@drawable/thumb" />
+
+            <TextView
+                android:id="@+id/speaker_level"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="100"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="pitch [50-150]"
+                android:textColor="#000000" />
+
+            <SeekBar
+                android:id="@+id/pitch_seek"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:max="100"
+                android:progress="50"
+                android:thumb="@drawable/thumb" />
+
+            <TextView
+                android:id="@+id/pitch_level"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="100"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="speed [50-150]"
+                android:textColor="#000000" />
+
+            <SeekBar
+                android:id="@+id/speed_seek"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:max="100"
+                android:progress="50"
+                android:thumb="@drawable/thumb" />
+
+            <TextView
+                android:id="@+id/speed_level"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="100"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="volume [50-150]"
+                android:textColor="#000000" />
+
+            <SeekBar
+                android:id="@+id/volume_seek"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:max="100"
+                android:progress="50"
+                android:thumb="@drawable/thumb" />
+
+            <TextView
+                android:id="@+id/volume_level"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="100"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/voicename_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="voiceName"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/voicename_edit"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:fadingEdge="vertical"
+                android:focusable="true"
+                android:gravity="center"
+                android:hint="입력"
+                android:inputType="textMultiLine"
+                android:paddingLeft="10dip"
+                android:textSize="12dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/emotion_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="emotion"
+                android:textColor="#000000" />
+
+            <Spinner
+                android:id="@+id/emotion_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:entries="@array/emotion" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/language_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="language"
+                android:textColor="#000000" />
+
+            <Spinner
+                android:id="@+id/language_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:entries="@array/language" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/encoding_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="encoding"
+                android:textColor="#000000" />
+
+            <Spinner
+                android:id="@+id/encoding_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:entries="@array/encoding_tts" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/Channel_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="channel"
+                android:textColor="#000000" />
+
+            <Spinner
+                android:id="@+id/Channel_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:entries="@array/channel_array" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/SampleRate_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="sampleRate"
+                android:textColor="#000000" />
+
+            <Spinner
+                android:id="@+id/SampleRate_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:entries="@array/samplerate_array" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/SampleFmt_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="SampleFmt"
+                android:textColor="#000000" />
+
+            <Spinner
+                android:id="@+id/SampleFmt_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:entries="@array/sampleFmt_array" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_request"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/vsttsrequest"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="VSTTS Request" />
+
+        <Button
+            android:id="@+id/vsttsplay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="play audio" />
+
+    </LinearLayout>
+
+</RelativeLayout>

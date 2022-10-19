@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="top|center"
+    android:orientation="vertical"
+    android:windowSoftInputMode="adjustPan" >
+
+    <LinearLayout
+        android:id="@+id/memo_bar_g"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="GenieMemo API DEMO"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/txt_scrollview_g"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_below="@+id/memo_bar_g"
+        android:layout_marginBottom="0dp"
+        android:fillViewport="true"
+        android:scrollbarSize="2dip"
+        android:scrollbars="vertical">
+
+        <TextView
+            android:id="@+id/note_g"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fadingEdge="vertical"
+            android:paddingLeft="11dip"
+            android:paddingTop="8dip"
+            android:paddingRight="11dip"
+            android:paddingBottom="8dip"
+            android:scrollbars="vertical"
+            android:textSize="16sp">
+
+        </TextView>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/option_bar_g"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_scrollview_g"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:id="@+id/selectOptLayout_g"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="4dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="select"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dip"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="select"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/select_spinner_g"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:entries="@array/geniememo_select" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dip"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="LastYN"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/lastYN_spinner_g"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:entries="@array/lastYN" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dip"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Callindex"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/callindex_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:entries="@array/call_index" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:id="@+id/callkeyLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dip"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="Call key"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/callKeyText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fadingEdge="vertical"
+                android:focusable="true"
+                android:gravity="start"
+                android:inputType="text"
+                android:paddingLeft="10dip"
+                android:textSize="20dip"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_request_g"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/genieMemorequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="GenieMemo Request" />
+
+        <Button
+            android:id="@+id/genieMemofile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="select File"/>
+
+        <Button
+            android:id="@+id/genieMemoquery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="GenieMemo Query" />
+
+    </LinearLayout>
+
+</RelativeLayout>

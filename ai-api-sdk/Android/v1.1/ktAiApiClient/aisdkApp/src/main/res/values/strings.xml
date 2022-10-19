@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AIAPITest</string>
+
+    <string name="stt_http_name">STT</string>
+    <string name="stt2_http_name">STT2</string>
+    <string name="stt_grpc_name">STT gRPC</string>
+    <string name="tts_http_name">TTS</string>
+    <string name="geniememo_http_name">Genie Memo</string>
+    <string name="vsdub_http_name">VSDUB</string>
+    <string name="vstts_http_name">VSTTS</string>
+
+    <string name="ok">확인</string>
+    <string name="require_permission">이 앱을 실행하려면 마이크와 외부 저장소 접근 권한이 필요합니다.</string>
+    <string name="denied_permission_restart">퍼미션이 거부되었습니다. 앱을 다시 실행하여 퍼미션을 허용해주세요.</string>
+    <string name="denied_permission_finish">"퍼미션이 거부되었습니다. 설정(앱 정보)에서 퍼미션을 허용해야 합니다. "</string>
+</resources>

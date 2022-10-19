@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Works/kt-aiapi-sdk-android-TestClient/aisdkApp/src/main/res/layout/activity_stt_grpc.xml" value="0.19794784095767423" />
+        <entry key="..\:/Works/kt-aiapi-sdk-android/aisdkApp/src/main/res/layout/activity_stt_grpc.xml" value="0.264" />
+        <entry key="..\:/mg/backup/kt-aiapi-sdk-android-TestClient(SDK-31)/aisdkApp/src/main/res/drawable/ic_launcher_background.xml" value="0.1575" />
+        <entry key="..\:/mg/backup/kt-aiapi-sdk-android-TestClient(SDK-31)/aisdkApp/src/main/res/drawable/thumb.xml" value="0.161" />
+        <entry key="..\:/mg/backup/kt-aiapi-sdk-android-TestClient(SDK-31)/aisdkApp/src/main/res/layout/activity_geniememo.xml" value="0.176" />
+        <entry key="..\:/mg/backup/kt-aiapi-sdk-android-TestClient(SDK-31)/aisdkApp/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/mg/backup/kt-aiapi-sdk-android-TestClient(SDK-31)/aisdkApp/src/main/res/layout/activity_stt_grpc.xml" value="0.264" />
+        <entry key="..\:/mg/backup/kt-aiapi-sdk-android-TestClient(SDK-31)/aisdkApp/src/main/res/layout/activity_stt_rest.xml" value="0.2" />
+        <entry key="..\:/mg/backup/kt-aiapi-sdk-android-TestClient(SDK-31)/aisdkApp/src/main/res/layout/activity_sttad_rest.xml" value="0.264" />
+        <entry key="..\:/mg/backup/kt-aiapi-sdk-android-TestClient(SDK-31)/aisdkApp/src/main/res/layout/activity_tts_rest.xml" value="0.4" />
+        <entry key="..\:/mg/backup/kt-aiapi-sdk-android-TestClient(SDK-31)/aisdkApp/src/main/res/layout/activity_vsdub.xml" value="0.2" />
+        <entry key="..\:/mg/backup/kt-aiapi-sdk-android-TestClient(SDK-31)/aisdkApp/src/main/res/layout/activity_vstts.xml" value="0.245018115942029" />
+        <entry key="..\:/mg/backup/kt-aiapi-sdk-android-TestClient(SDK-31)/aisdkApp/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1575" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
