@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "yLusCc4jVeqADpi3VxoP5je42acZFXEQL2c/p1Ccnaw+MJYCfVC5lVRTujND4xQtQZM3VEmc9c/Kur1cALPL7Q==",
+  "success": true,
+  "projectFilePath": "D:\\_Dev\\workspaceC\\AiApiTestClient\\AiApiTestClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\commonservicelocator\\2.0.6\\commonservicelocator.2.0.6.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.toolkit.mvvm\\7.0.0\\microsoft.toolkit.mvvm.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,43 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "CommonServiceLocator/2.0.6": {
+        "runtime": {
+          "lib/net5.0/CommonServiceLocator.dll": {
+            "assemblyVersion": "2.0.6.0",
+            "fileVersion": "2.0.6.0"
+          }
+        }
+      },
+      "Microsoft.Toolkit.Mvvm/7.0.0": {
+        "runtime": {
+          "lib/net5.0/Microsoft.Toolkit.Mvvm.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.0.1"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CommonServiceLocator/2.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cIVBcA+z8B9oyM67/6mVsJ9PIswFXqREz6nHdngaA7M56su0kOlqlfDHrhYOBB/vAZU466WOWTJCzrVEWrYUvQ==",
+      "path": "commonservicelocator/2.0.6",
+      "hashPath": "commonservicelocator.2.0.6.nupkg.sha512"
+    },
+    "Microsoft.Toolkit.Mvvm/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-I1rjnBzt7pIzH6I+YKXVha/VRVPSMjgvWwUXhmmYU/eIZSmb6+st6IQtw0UMm2yyxSRyncE7JK9so0vMa/ntgA==",
+      "path": "microsoft.toolkit.mvvm/7.0.0",
+      "hashPath": "microsoft.toolkit.mvvm.7.0.0.nupkg.sha512"
+    }
+  }
+}

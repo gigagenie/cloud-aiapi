@@ -1,0 +1,40 @@
+﻿<Window x:Class="AiApiTestClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:AiApiTestClient.View"
+        xmlns:local="clr-namespace:AiApiTestClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="800"
+        DataContext="{Binding Main, Source={StaticResource Locator}}">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Auth">
+                <views:AuthView VerticalAlignment="Top"/>
+            </TabItem>
+            <TabItem Header="STT">
+                <views:SttView/>
+            </TabItem>
+            <TabItem Header="STT2">
+                <views:Stt2View/>
+            </TabItem>
+            <TabItem Header="STTgRPC">
+                <views:SttgRPCView/>
+            </TabItem>
+            <TabItem Header="TTS">
+                <views:TtsView/>
+            </TabItem>
+			<TabItem Header="VSTTS">
+                <views:VsttsView/>
+            </TabItem>
+            <TabItem Header="VSDUB">
+                <views:VsdubView/>
+            </TabItem>
+            <TabItem Header="Geniememo">
+                <views:GenieMemoView/>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

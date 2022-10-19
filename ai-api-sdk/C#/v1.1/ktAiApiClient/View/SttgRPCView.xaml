@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="AiApiTestClient.View.SttgRPCView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AiApiTestClient.View"
+             mc:Ignorable="d" 
+             DataContext="{Binding STTgRPC, Source={StaticResource Locator}}">
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Width" Value="100"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <GroupBox Header="STTgRPC DEMO">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Audio file path"/>
+                    <TextBox Text="{Binding AudioFilePath}" Width="500" MaxLength="255"></TextBox>
+                    <Button Content="Open file" Command="{Binding IFileOpenCommand}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="STTModelCode"/>
+                    <ComboBox SelectedValue="{Binding SttModelCode}" SelectedValuePath="Content" SelectedIndex="0">
+                        <ComboBoxItem Content="1"/>
+                        <ComboBoxItem Content="2"/>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="STT Mode"/>
+                    <ComboBox SelectedValue="{Binding SttMode}" SelectedValuePath="Content" SelectedIndex="0">
+                        <ComboBoxItem Content="long"/>
+                        <ComboBoxItem Content="cmd"/>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Sample rate"/>
+                    <ComboBox SelectedValue="{Binding SampleRate}" SelectedValuePath="Content" SelectedIndex="1">
+                        <ComboBoxItem Content="8000"/>
+                        <ComboBoxItem Content="16000"/>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Sample format"/>
+                    <ComboBox SelectedValue="{Binding SampleFormat}" SelectedValuePath="Content" SelectedIndex="0">
+                        <ComboBoxItem Content="S16LE"/>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Channel"/>
+                    <ComboBox SelectedIndex="{Binding ChannelIndex}">
+                        <ComboBoxItem Content="Mono"/>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Button Content="connectGRPC" Command="{Binding IconnectGRPCCommand}"/>
+                    <Button Content="sendAudioData" Command="{Binding IsendAudioDataCommand}" Margin="20,0,0,0"/>
+                    <Button Content="sendAudioData2" Command="{Binding IsendAudioDataCommand2}" Margin="20,0,0,0"/>
+                    <Button Content="stopSTT" Command="{Binding IstopSTTCommand}" Margin="20,0,0,0"/>
+                </StackPanel>
+                <GroupBox Header="Output" Height="150">
+                    <ScrollViewer MaxHeight="150" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                        <TextBlock Text="{Binding outputText}" TextAlignment="Left" TextWrapping="Wrap" Width="500"
+                                   ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                    </ScrollViewer>
+                </GroupBox>
+                <Button Content="Clear output" Command="{Binding IClearOutputCommand}" Width="100" Margin="0,10,0,0"/>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+
+</UserControl>

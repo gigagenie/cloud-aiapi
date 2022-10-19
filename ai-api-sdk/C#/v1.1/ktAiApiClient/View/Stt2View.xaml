@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="AiApiTestClient.View.Stt2View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:vm="clr-namespace:AiApiTestClient.ViewModel"
+             xmlns:local="clr-namespace:AiApiTestClient.View"
+             mc:Ignorable="d"
+             DataContext="{Binding STTAD, Source={StaticResource Locator}}">
+
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Width" Value="100"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <GroupBox Header="STT2 Rest API DEMO">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Audio file path"/>
+                    <TextBox Text="{Binding AudioFilePath}" Width="500" MaxLength="255"></TextBox>
+                    <Button Content="Open file" Command="{Binding IFileOpenCommand}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Encoding" />
+                    <ComboBox SelectedValue="{Binding Encoding}" SelectedValuePath="Content" SelectedIndex="0">
+                        <ComboBoxItem Content="mp3"/>
+                        <ComboBoxItem Content="raw"/>
+                        <ComboBoxItem Content="wav"/>
+                        <ComboBoxItem Content="vor"/>
+                        <ComboBoxItem Content="fla"/>
+                        <ComboBoxItem Content="aac"/>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="STTModelCode"/>
+                    <ComboBox SelectedValue="{Binding SttModelcode}" SelectedValuePath="Content" SelectedIndex="0">
+                        <ComboBoxItem Content="3"/>
+                        <ComboBoxItem Content="4"/>
+                        <ComboBoxItem Content="5"/>
+                    </ComboBox>
+                </StackPanel>
+                <Button Content="STT2 요청" Width="200" Command="{Binding IRequestCommand}"/>
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <TextBlock Text="TransactionId"/>
+                    <TextBox Text="{Binding transactionId}" Width="300"/>
+                    <Button Content="querySTT2" Command="{Binding IQuerySTTCommand}" IsEnabled="{Binding IsEnableQuery}"/>
+                </StackPanel>
+                <GroupBox Header="Output" Height="150">
+                    <ScrollViewer MaxHeight="150"  HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                        <TextBlock Text="{Binding outputText}" TextAlignment="Left" TextWrapping="Wrap" Width="500"
+                                   ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                    </ScrollViewer>
+                </GroupBox>
+                <Button Content="Clear output" Command="{Binding IClearOutputCommand}" Width="100" Margin="0,20,0,0"/>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</UserControl>
