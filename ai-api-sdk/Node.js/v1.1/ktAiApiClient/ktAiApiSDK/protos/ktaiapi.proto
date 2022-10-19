@@ -1,0 +1,28 @@
+syntax="proto3";
+option go_package="sttRestApi/grpcapi";
+package kt.gigagenie.ai.api;
+service KtAiApi {
+  rpc ktSttService(stream reqKtStt) returns (stream resKtStt){}
+}
+message reqKtStt {
+  oneof sttReq {
+    controlMsg signal=1;
+    bytes pcmData=2;
+  }
+}
+message resKtStt {
+  oneof sttRes {
+    controlMsg signal=1;
+    sttResultMsg sttResult=2;
+  }
+}
+message controlMsg {
+  string msgType=1;
+  string msgPayload=2;
+}
+message sttResultMsg {
+  string text=1;
+  string type=2;
+  float startTime=3;
+  float endTime=4;
+}

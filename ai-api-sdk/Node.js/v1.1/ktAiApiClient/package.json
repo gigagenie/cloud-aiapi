@@ -1,0 +1,25 @@
+{
+  "type": "module",
+  "name": "ktAiApiClient",
+  "version": "1.0.0",
+  "description": "ktAiApiClient Sample",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "KT AI연구소",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.7.1",
+    "@grpc/proto-loader": "^0.7.3",
+    "async": "^3.2.4",
+    "axios": "^0.27.2",
+    "dateformat": "^5.0.3",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "google-protobuf": "^3.21.0",
+    "lodash": "^4.17.21",
+    "minimist": "^1.2.6",
+    "sync-request": "^6.1.0"
+  }
+}
