@@ -1,0 +1,477 @@
+PODS:
+  - "!ProtoCompiler (3.14.0)":
+    - Protobuf (~> 3.0)
+  - "!ProtoCompiler-gRPCPlugin (1.36.1)":
+    - "!ProtoCompiler (= 3.14.0)"
+    - gRPC-ProtoRPC (= 1.36.1)
+  - abseil/algorithm/algorithm (1.20200923.3):
+    - abseil/base/config
+  - abseil/algorithm/container (1.20200923.3):
+    - abseil/algorithm/algorithm
+    - abseil/base/core_headers
+    - abseil/meta/type_traits
+  - abseil/base/atomic_hook (1.20200923.3):
+    - abseil/base/config
+    - abseil/base/core_headers
+  - abseil/base/base (1.20200923.3):
+    - abseil/base/atomic_hook
+    - abseil/base/base_internal
+    - abseil/base/config
+    - abseil/base/core_headers
+    - abseil/base/dynamic_annotations
+    - abseil/base/log_severity
+    - abseil/base/raw_logging_internal
+    - abseil/base/spinlock_wait
+    - abseil/meta/type_traits
+  - abseil/base/base_internal (1.20200923.3):
+    - abseil/base/config
+    - abseil/meta/type_traits
+  - abseil/base/bits (1.20200923.3):
+    - abseil/base/config
+    - abseil/base/core_headers
+  - abseil/base/config (1.20200923.3)
+  - abseil/base/core_headers (1.20200923.3):
+    - abseil/base/config
+  - abseil/base/dynamic_annotations (1.20200923.3):
+    - abseil/base/config
+    - abseil/base/core_headers
+  - abseil/base/endian (1.20200923.3):
+    - abseil/base/config
+    - abseil/base/core_headers
+  - abseil/base/errno_saver (1.20200923.3):
+    - abseil/base/config
+  - abseil/base/exponential_biased (1.20200923.3):
+    - abseil/base/config
+    - abseil/base/core_headers
+  - abseil/base/log_severity (1.20200923.3):
+    - abseil/base/config
+    - abseil/base/core_headers
+  - abseil/base/malloc_internal (1.20200923.3):
+    - abseil/base/base
+    - abseil/base/base_internal
+    - abseil/base/config
+    - abseil/base/core_headers
+    - abseil/base/dynamic_annotations
+    - abseil/base/raw_logging_internal
+  - abseil/base/raw_logging_internal (1.20200923.3):
+    - abseil/base/atomic_hook
+    - abseil/base/config
+    - abseil/base/core_headers
+    - abseil/base/log_severity
+  - abseil/base/spinlock_wait (1.20200923.3):
+    - abseil/base/base_internal
+    - abseil/base/core_headers
+    - abseil/base/errno_saver
+  - abseil/base/throw_delegate (1.20200923.3):
+    - abseil/base/config
+    - abseil/base/raw_logging_internal
+  - abseil/container/common (1.20200923.3):
+    - abseil/meta/type_traits
+    - abseil/types/optional
+  - abseil/container/compressed_tuple (1.20200923.3):
+    - abseil/utility/utility
+  - abseil/container/container_memory (1.20200923.3):
+    - abseil/base/config
+    - abseil/memory/memory
+    - abseil/meta/type_traits
+    - abseil/utility/utility
+  - abseil/container/fixed_array (1.20200923.3):
+    - abseil/algorithm/algorithm
+    - abseil/base/config
+    - abseil/base/core_headers
+    - abseil/base/dynamic_annotations
+    - abseil/base/throw_delegate
+    - abseil/container/compressed_tuple
+    - abseil/memory/memory
+  - abseil/container/flat_hash_map (1.20200923.3):
+    - abseil/algorithm/container
+    - abseil/container/container_memory
+    - abseil/container/hash_function_defaults
+    - abseil/container/raw_hash_map
+    - abseil/memory/memory
+  - abseil/container/flat_hash_set (1.20200923.3):
+    - abseil/algorithm/container
+    - abseil/base/core_headers
+    - abseil/container/container_memory
+    - abseil/container/hash_function_defaults
+    - abseil/container/raw_hash_set
+    - abseil/memory/memory
+  - abseil/container/hash_function_defaults (1.20200923.3):
+    - abseil/base/config
+    - abseil/hash/hash
+    - abseil/strings/cord
+    - abseil/strings/strings
+  - abseil/container/hash_policy_traits (1.20200923.3):
+    - abseil/meta/type_traits
+  - abseil/container/hashtable_debug_hooks (1.20200923.3):
+    - abseil/base/config
+  - abseil/container/hashtablez_sampler (1.20200923.3):
+    - abseil/base/base
+    - abseil/base/core_headers
+    - abseil/base/exponential_biased
+    - abseil/container/have_sse
+    - abseil/debugging/stacktrace
+    - abseil/memory/memory
+    - abseil/synchronization/synchronization
+    - abseil/utility/utility
+  - abseil/container/have_sse (1.20200923.3)
+  - abseil/container/inlined_vector (1.20200923.3):
+    - abseil/algorithm/algorithm
+    - abseil/base/core_headers
+    - abseil/base/throw_delegate
+    - abseil/container/inlined_vector_internal
+    - abseil/memory/memory
+  - abseil/container/inlined_vector_internal (1.20200923.3):
+    - abseil/base/core_headers
+    - abseil/container/compressed_tuple
+    - abseil/memory/memory
+    - abseil/meta/type_traits
+    - abseil/types/span
+  - abseil/container/layout (1.20200923.3):
+    - abseil/base/config
+    - abseil/base/core_headers
+    - abseil/meta/type_traits
+    - abseil/strings/strings
+    - abseil/types/span
+    - abseil/utility/utility
+  - abseil/container/raw_hash_map (1.20200923.3):
+    - abseil/base/throw_delegate
+    - abseil/container/container_memory
+    - abseil/container/raw_hash_set
+  - abseil/container/raw_hash_set (1.20200923.3):
+    - abseil/base/bits
+    - abseil/base/config
+    - abseil/base/core_headers
+    - abseil/base/endian
+    - abseil/container/common
+    - abseil/container/compressed_tuple
+    - abseil/container/container_memory
+    - abseil/container/hash_policy_traits
+    - abseil/container/hashtable_debug_hooks
+    - abseil/container/hashtablez_sampler
+    - abseil/container/have_sse
+    - abseil/container/layout
+    - abseil/memory/memory
+    - abseil/meta/type_traits
+    - abseil/utility/utility
+  - abseil/debugging/debugging_internal (1.20200923.3):
+    - abseil/base/config
+    - abseil/base/core_headers
+    - abseil/base/dynamic_annotations
+    - abseil/base/errno_saver
+    - abseil/base/raw_logging_internal
+  - abseil/debugging/demangle_internal (1.20200923.3):
+    - abseil/base/base
+    - abseil/base/config
+    - abseil/base/core_headers
+  - abseil/debugging/stacktrace (1.20200923.3):
+    - abseil/base/config
+    - abseil/base/core_headers
+    - abseil/debugging/debugging_internal
+  - abseil/debugging/symbolize (1.20200923.3):
+    - abseil/base/base
+    - abseil/base/config
+    - abseil/base/core_headers
+    - abseil/base/dynamic_annotations
+    - abseil/base/malloc_internal
+    - abseil/base/raw_logging_internal
+    - abseil/debugging/debugging_internal
+    - abseil/debugging/demangle_internal
+    - abseil/strings/strings
+  - abseil/functional/bind_front (1.20200923.3):
+    - abseil/base/base_internal
+    - abseil/container/compressed_tuple
+    - abseil/meta/type_traits
+    - abseil/utility/utility
+  - abseil/functional/function_ref (1.20200923.3):
+    - abseil/base/base_internal
+    - abseil/meta/type_traits
+  - abseil/hash/city (1.20200923.3):
+    - abseil/base/config
+    - abseil/base/core_headers
+    - abseil/base/endian
+  - abseil/hash/hash (1.20200923.3):
+    - abseil/base/core_headers
+    - abseil/base/endian
+    - abseil/container/fixed_array
+    - abseil/hash/city
+    - abseil/meta/type_traits
+    - abseil/numeric/int128
+    - abseil/strings/strings
+    - abseil/types/optional
+    - abseil/types/variant
+    - abseil/utility/utility
+  - abseil/memory/memory (1.20200923.3):
+    - abseil/base/core_headers
+    - abseil/meta/type_traits
+  - abseil/meta/type_traits (1.20200923.3):
+    - abseil/base/config
+  - abseil/numeric/int128 (1.20200923.3):
+    - abseil/base/bits
+    - abseil/base/config
+    - abseil/base/core_headers
+  - abseil/status/status (1.20200923.3):
+    - abseil/base/atomic_hook
+    - abseil/base/config
+    - abseil/base/core_headers
+    - abseil/base/raw_logging_internal
+    - abseil/container/inlined_vector
+    - abseil/debugging/stacktrace
+    - abseil/debugging/symbolize
+    - abseil/strings/cord
+    - abseil/strings/str_format
+    - abseil/strings/strings
+    - abseil/types/optional
+  - abseil/status/statusor (1.20200923.3):
+    - abseil/base/core_headers
+    - abseil/base/raw_logging_internal
+    - abseil/meta/type_traits
+    - abseil/status/status
+    - abseil/strings/strings
+    - abseil/types/variant
+    - abseil/utility/utility
+  - abseil/strings/cord (1.20200923.3):
+    - abseil/base/base
+    - abseil/base/core_headers
+    - abseil/base/endian
+    - abseil/base/raw_logging_internal
+    - abseil/container/fixed_array
+    - abseil/container/inlined_vector
+    - abseil/functional/function_ref
+    - abseil/meta/type_traits
+    - abseil/strings/cord_internal
+    - abseil/strings/internal
+    - abseil/strings/str_format
+    - abseil/strings/strings
+    - abseil/types/optional
+  - abseil/strings/cord_internal (1.20200923.3):
+    - abseil/base/base_internal
+    - abseil/container/compressed_tuple
+    - abseil/meta/type_traits
+    - abseil/strings/strings
+  - abseil/strings/internal (1.20200923.3):
+    - abseil/base/config
+    - abseil/base/core_headers
+    - abseil/base/endian
+    - abseil/base/raw_logging_internal
+    - abseil/meta/type_traits
+  - abseil/strings/str_format (1.20200923.3):
+    - abseil/strings/str_format_internal
+  - abseil/strings/str_format_internal (1.20200923.3):
+    - abseil/base/bits
+    - abseil/base/config
+    - abseil/base/core_headers
+    - abseil/functional/function_ref
+    - abseil/meta/type_traits
+    - abseil/numeric/int128
+    - abseil/strings/strings
+    - abseil/types/optional
+    - abseil/types/span
+  - abseil/strings/strings (1.20200923.3):
+    - abseil/base/base
+    - abseil/base/bits
+    - abseil/base/config
+    - abseil/base/core_headers
+    - abseil/base/endian
+    - abseil/base/raw_logging_internal
+    - abseil/base/throw_delegate
+    - abseil/memory/memory
+    - abseil/meta/type_traits
+    - abseil/numeric/int128
+    - abseil/strings/internal
+  - abseil/synchronization/graphcycles_internal (1.20200923.3):
+    - abseil/base/base
+    - abseil/base/base_internal
+    - abseil/base/config
+    - abseil/base/core_headers
+    - abseil/base/malloc_internal
+    - abseil/base/raw_logging_internal
+  - abseil/synchronization/kernel_timeout_internal (1.20200923.3):
+    - abseil/base/core_headers
+    - abseil/base/raw_logging_internal
+    - abseil/time/time
+  - abseil/synchronization/synchronization (1.20200923.3):
+    - abseil/base/atomic_hook
+    - abseil/base/base
+    - abseil/base/base_internal
+    - abseil/base/config
+    - abseil/base/core_headers
+    - abseil/base/dynamic_annotations
+    - abseil/base/malloc_internal
+    - abseil/base/raw_logging_internal
+    - abseil/debugging/stacktrace
+    - abseil/debugging/symbolize
+    - abseil/synchronization/graphcycles_internal
+    - abseil/synchronization/kernel_timeout_internal
+    - abseil/time/time
+  - abseil/time/internal/cctz/civil_time (1.20200923.3):
+    - abseil/base/config
+  - abseil/time/internal/cctz/time_zone (1.20200923.3):
+    - abseil/base/config
+    - abseil/time/internal/cctz/civil_time
+  - abseil/time/time (1.20200923.3):
+    - abseil/base/base
+    - abseil/base/core_headers
+    - abseil/base/raw_logging_internal
+    - abseil/numeric/int128
+    - abseil/strings/strings
+    - abseil/time/internal/cctz/civil_time
+    - abseil/time/internal/cctz/time_zone
+  - abseil/types/bad_optional_access (1.20200923.3):
+    - abseil/base/config
+    - abseil/base/raw_logging_internal
+  - abseil/types/bad_variant_access (1.20200923.3):
+    - abseil/base/config
+    - abseil/base/raw_logging_internal
+  - abseil/types/optional (1.20200923.3):
+    - abseil/base/base_internal
+    - abseil/base/config
+    - abseil/base/core_headers
+    - abseil/memory/memory
+    - abseil/meta/type_traits
+    - abseil/types/bad_optional_access
+    - abseil/utility/utility
+  - abseil/types/span (1.20200923.3):
+    - abseil/algorithm/algorithm
+    - abseil/base/core_headers
+    - abseil/base/throw_delegate
+    - abseil/meta/type_traits
+  - abseil/types/variant (1.20200923.3):
+    - abseil/base/base_internal
+    - abseil/base/config
+    - abseil/base/core_headers
+    - abseil/meta/type_traits
+    - abseil/types/bad_variant_access
+    - abseil/utility/utility
+  - abseil/utility/utility (1.20200923.3):
+    - abseil/base/base_internal
+    - abseil/base/config
+    - abseil/meta/type_traits
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - BoringSSL-GRPC (0.0.16):
+    - BoringSSL-GRPC/Implementation (= 0.0.16)
+    - BoringSSL-GRPC/Interface (= 0.0.16)
+  - BoringSSL-GRPC/Implementation (0.0.16):
+    - BoringSSL-GRPC/Interface (= 0.0.16)
+  - BoringSSL-GRPC/Interface (0.0.16)
+  - gRPC-Core (1.36.1):
+    - gRPC-Core/Implementation (= 1.36.1)
+    - gRPC-Core/Interface (= 1.36.1)
+  - gRPC-Core/Implementation (1.36.1):
+    - abseil/base/base (= 1.20200923.3)
+    - abseil/container/flat_hash_map (= 1.20200923.3)
+    - abseil/container/flat_hash_set (= 1.20200923.3)
+    - abseil/container/inlined_vector (= 1.20200923.3)
+    - abseil/functional/bind_front (= 1.20200923.3)
+    - abseil/memory/memory (= 1.20200923.3)
+    - abseil/status/status (= 1.20200923.3)
+    - abseil/status/statusor (= 1.20200923.3)
+    - abseil/strings/str_format (= 1.20200923.3)
+    - abseil/strings/strings (= 1.20200923.3)
+    - abseil/synchronization/synchronization (= 1.20200923.3)
+    - abseil/time/time (= 1.20200923.3)
+    - abseil/types/optional (= 1.20200923.3)
+    - BoringSSL-GRPC (= 0.0.16)
+    - gRPC-Core/Interface (= 1.36.1)
+  - gRPC-Core/Interface (1.36.1)
+  - gRPC-ProtoRPC (1.36.1):
+    - gRPC-ProtoRPC/Legacy (= 1.36.1)
+    - gRPC-ProtoRPC/Legacy-Header (= 1.36.1)
+    - gRPC-ProtoRPC/Main (= 1.36.1)
+  - gRPC-ProtoRPC/Legacy (1.36.1):
+    - gRPC-ProtoRPC/Legacy-Header (= 1.36.1)
+    - gRPC-ProtoRPC/Main (= 1.36.1)
+    - gRPC-RxLibrary (= 1.36.1)
+    - gRPC/GRPCCore (= 1.36.1)
+    - Protobuf (~> 3.0)
+  - gRPC-ProtoRPC/Legacy-Header (1.36.1)
+  - gRPC-ProtoRPC/Main (1.36.1):
+    - gRPC-ProtoRPC/Legacy-Header (= 1.36.1)
+    - gRPC/Interface (= 1.36.1)
+    - Protobuf (~> 3.0)
+  - gRPC-RxLibrary (1.36.1):
+    - gRPC-RxLibrary/Implementation (= 1.36.1)
+    - gRPC-RxLibrary/Interface (= 1.36.1)
+  - gRPC-RxLibrary/Implementation (1.36.1):
+    - gRPC-RxLibrary/Interface
+  - gRPC-RxLibrary/Interface (1.36.1)
+  - gRPC/GRPCCore (1.36.1):
+    - gRPC-Core (= 1.36.1)
+    - gRPC-RxLibrary (= 1.36.1)
+    - gRPC/Interface (= 1.36.1)
+    - gRPC/Interface-Legacy (= 1.36.1)
+  - gRPC/Interface (1.36.1):
+    - gRPC/Interface-Legacy (= 1.36.1)
+  - gRPC/Interface-Legacy (1.36.1):
+    - gRPC-RxLibrary/Interface (= 1.36.1)
+  - KTAIAPISDK (0.0.1):
+    - "!ProtoCompiler-gRPCPlugin (~> 1.0)"
+    - AFNetworking
+    - KTAIAPISDK/Messages (= 0.0.1)
+    - KTAIAPISDK/Services (= 0.0.1)
+  - KTAIAPISDK/Messages (0.0.1):
+    - "!ProtoCompiler-gRPCPlugin (~> 1.0)"
+    - AFNetworking
+    - Protobuf
+  - KTAIAPISDK/Services (0.0.1):
+    - "!ProtoCompiler-gRPCPlugin (~> 1.0)"
+    - AFNetworking
+    - gRPC-ProtoRPC
+    - KTAIAPISDK/Messages
+  - Protobuf (3.14.0)
+  - Toast (4.0.0)
+
+DEPENDENCIES:
+  - AFNetworking
+  - KTAIAPISDK (from `.`)
+  - Toast
+
+SPEC REPOS:
+  trunk:
+    - "!ProtoCompiler"
+    - "!ProtoCompiler-gRPCPlugin"
+    - abseil
+    - AFNetworking
+    - BoringSSL-GRPC
+    - gRPC
+    - gRPC-Core
+    - gRPC-ProtoRPC
+    - gRPC-RxLibrary
+    - Protobuf
+    - Toast
+
+EXTERNAL SOURCES:
+  KTAIAPISDK:
+    :path: "."
+
+SPEC CHECKSUMS:
+  "!ProtoCompiler": 7a3eea35016a66b9d4117c75dc2f67cfaba9f0e4
+  "!ProtoCompiler-gRPCPlugin": 6ce3aa043d1d42ad5e964b9a66bf9a40c824f5fb
+  abseil: e08929482317e064100e0185a72539b848b8f4f3
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  BoringSSL-GRPC: 2f28b8d48e3f168f2ec8ba1790d60a0dbe30d0f2
+  gRPC: bd5b515acd12ff57524f4277d6440b966ee366b5
+  gRPC-Core: 696c3c02ba9c79fd257c33d036405f47b57448c7
+  gRPC-ProtoRPC: 298b47e0b84742fd59e92e545939b54c3174bfad
+  gRPC-RxLibrary: 6eed660607640ad7746bbfd864c1898659e47780
+  KTAIAPISDK: 9c6d404660a937c41c3807a5bfb7d550271dd67d
+  Protobuf: 0cde852566359049847168e51bd1c690e0f70056
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+
+PODFILE CHECKSUM: ed3320c78164c777a0a97e9adf5f53342de21047
+
+COCOAPODS: 1.11.3
