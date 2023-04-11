@@ -28,9 +28,9 @@ android {
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation files('libs\\ktAiApiSdk-1.1-SNAPSHOT.jar')
 
     ////
-    implementation files('libs/ktAiApiSdk-1.1.jar')
     def lifecycle_version = "2.4.0"
     implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"

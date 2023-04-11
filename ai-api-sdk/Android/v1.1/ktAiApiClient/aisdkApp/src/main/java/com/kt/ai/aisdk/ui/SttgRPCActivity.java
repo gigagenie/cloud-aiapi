@@ -20,6 +20,7 @@ import android.widget.Toast;
 
 import kt.gigagenie.ai.api.STTgRPC;
 import kt.gigagenie.ai.api.STTgRPCCallback;
+import kt.gigagenie.ai.api.TTS;
 
 
 public class SttgRPCActivity extends AppCompatActivity implements View.OnClickListener {

@@ -20,7 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class  MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG =  "MainActivity";
 

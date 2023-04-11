@@ -64,19 +64,19 @@
             android:name=".GenieMemoActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/geniememo_http_name"
-            android:exported="true">
+            android:exported="false">
         </activity>
         <activity
             android:name=".VsdubActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/vsdub_http_name"
-            android:exported="true">
+            android:exported="false">
         </activity>
         <activity
             android:name=".VsttsActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/vstts_http_name"
-            android:exported="true">
+            android:exported="false">
         </activity>
     </application>
 
