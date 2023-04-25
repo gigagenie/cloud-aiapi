@@ -276,9 +276,9 @@ public class VsdubActivity extends AppCompatActivity implements View.OnClickList
                     break;
                 }
 
-                mNote.setText("");
-                mNote.invalidate();
-                mTransactioIdEditText.setText("");
+//                mNote.setText("");
+//                mNote.invalidate();
+//                mTransactioIdEditText.setText("");
 
                 if (TextUtils.isEmpty(mTartgetFilePath)) {
                     Toast.makeText(this, "Text로 변환할 파일을 먼저 선택해주세요.", Toast.LENGTH_SHORT).show();

@@ -216,6 +216,9 @@ public class SttgRPCActivity extends AppCompatActivity implements View.OnClickLi
             Log.d(TAG, "onStart(): mSttgRPC is null");
             mSttgRPC = new STTgRPC(SttgRPCActivity.this);
             mSttgRPC.setSTTgRPCCallback(onSTTgRPCCallbackListener);
+            if((ENV.hostname.length() - ENV.hostname.replace(String.valueOf("."), "").length()) >= 3 ) {
+                mSttgRPC.checkHostnameIP();
+            }
             mSttgRPC.setServiceURL(ENV.hostname + ":" + ENV.ai_api_grpc_port);
             mSttgRPC.setMetaData(ENV.client_key, ENV.client_id, ENV.client_secret);
         } else {
